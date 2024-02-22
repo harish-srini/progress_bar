@@ -20,6 +20,19 @@ def get_total_length(iterable, total):
         return None
 
 def progress_bar(iterable, total=None, length=40, title='Progress'):
+    """
+    Displays a progress bar for an iterable object.
+
+    Args:
+        iterable: The iterable object to iterate over.
+        total: The total number of items in the iterable (optional).
+        length: The length of the progress bar (default: 40).
+        title: The title of the progress bar (default: 'Progress').
+
+    Yields:
+        The next item from the iterable.
+    """
+    
     total = get_total_length(iterable, total)
     
     if is_jupyter_notebook():
